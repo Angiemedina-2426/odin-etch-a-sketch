@@ -11,11 +11,29 @@ function updateGridSize(value){
 
 slider.addEventListener("input", ()=>{
   updateGridSize(slider.value);
+  createGrid(slider.value);
 });
 
 input.addEventListener("input",()=>{
   updateGridSize(input.value);
-})
+  createGrid(input.value);
+});
 
 
+function createGrid(num){
+sketchContainer.replaceChildren();
 
+const numberOfGrid = num * num;
+const squareSize = 100/num;
+
+for (let i = 0; i <numberOfGrid; i++){
+const newDiv = document.createElement("div");
+newDiv.classList.add("newDivStyle");
+
+newDiv.style.width = `${squareSize}%`;
+newDiv.style.height = `${squareSize}%`
+sketchContainer.appendChild(newDiv);
+};
+}
+
+console.log(sketchContainer);
