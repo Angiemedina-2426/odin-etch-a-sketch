@@ -8,17 +8,28 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <h1>Odin: Etch A Sketch</h1>
   <div class="grid-controls">
     <label for="gridSize">Grid Size</label>
     <span id="gridValue">16 x 16</span>
     <input type="number" id="gridSize" min="1" max="100" value="16">
     <input type="range" id="gridSlider" min="1" max="100" value="16">
   </div>
+  <div class="optionButtons">
+    <button data-mode="single">Single Color</button>
+    <input type="color" id="colorPicker" value="#4169e1">
+    <button data-mode="rainbow">Random RGB</button>
+    <button data-mode="darken">Darken</button>
+    <button data-mode="erase">Erase</button>
+  </div>
+  <div>
+    <button id="clear">Clear Board</button>
+  </div>
 
   <div class="sketchContainer">
 
   </div>
-
+  
 
 </body>
 </html>
